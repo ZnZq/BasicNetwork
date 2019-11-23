@@ -27,7 +27,7 @@ namespace Server
 
                 foreach (var c in server.Clients)
                 {
-                    if (c.Handler != client.Handler)
+                    if (c != client)
                         c.Send(packet);
                 }
             };
